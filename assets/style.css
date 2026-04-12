@@ -387,8 +387,14 @@ header {
 }
 
 @media (max-width: 900px) {
-  .category-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .cat-card { min-height: 380px; }
+  .category-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .cat-card { min-height: 200px; padding: 1.5rem 0.65rem 0.65rem; border-radius: 12px; }
+  .cat-title { font-size: 0.95rem; margin-bottom: 0.4rem; letter-spacing: -0.005em; }
+  .cat-count { font-size: 0.55rem; top: 0.5rem; left: 0.6rem; letter-spacing: 0.1em; }
+  .cat-notch { width: 38px; height: 38px; border-top-left-radius: 12px; }
+  .cat-arrow { width: 24px; height: 24px; }
+  .cat-arrow svg { width: 12px; height: 12px; }
+  .cat-img { border-radius: 8px; }
   .commerce-hero { padding: 1.5rem 0 2.5rem; }
   .ch-panel { padding: 2.5rem 1.5rem; border-radius: 18px; }
   .ch-panel--narrow { padding: 2.25rem 1.5rem; }
