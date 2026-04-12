@@ -194,7 +194,7 @@ header {
 .ch-panel {
   background: var(--bg-alt);
   border-radius: clamp(18px, 2.5vw, 28px);
-  padding: clamp(3rem, 9vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
   position: relative;
   overflow: hidden;
 }
@@ -214,7 +214,7 @@ header {
   flex-shrink: 0;
 }
 .ch-brand img {
-  height: clamp(132px, 15vw, 180px);
+  height: clamp(84px, 9vw, 120px);
   width: auto;
   display: block;
   mix-blend-mode: multiply;
