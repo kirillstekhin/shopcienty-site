@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | SHOPCIENTY</title>
+<meta name="description" content="Get in touch with SHOPCIENTY. Questions about orders, products, or returns? We&#x27;re here to help. Mon-Fri, 9-17 GMT.">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container header-inner">
+    <a href="./" class="logo" aria-label="Shopcienty home">
+      <img src="./assets/logo-icon.jpg" alt="Shopcienty">
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
+    <nav class="nav" id="main-nav">
+      <a href="./">The&nbsp;Register</a>
+      <a href="./about.html">About</a>
+      <a href="./delivery.html">Delivery</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./cart.html" class="cart-link" aria-label="Basket"><svg class="cart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h3l2.4 11.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.5L22 7H6"/></svg><span class="cart-badge">0</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="about-opener">
+  <div class="container">
+    <div class="about-opener-panel">
+      <div class="about-chapter-marks">
+        <span class="about-numeral">№.&nbsp;IV</span>
+        <span class="about-sep">·</span>
+        <span>Correspondence</span>
+        <span class="about-sep">·</span>
+        <span>Mon–Fri, 9–17&nbsp;GMT</span>
+      </div>
+      <h1 class="about-title">Write to&nbsp;<em>us</em>.</h1>
+      <p class="about-standfirst">A small team sits behind this catalogue, and every letter is read by hand. Replies usually within the working day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-lead">
+  <div class="container">
+    <div class="about-prose">
+      <p class="about-lead-para"><span class="about-dropcap">A</span> question about an order, a product enquiry, a suggestion for the register — or simply a note to say hello. Fill in the form below, or write to us directly at <strong>support@shopcienty.co.uk</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-contact-section">
+  <div class="container">
+    <div class="about-section-head">
+      <span class="about-section-numeral">I.</span>
+      <h2 class="about-section-title">A letter</h2>
+      <span class="about-section-rule" aria-hidden="true"></span>
+    </div>
+    <form class="about-form" onsubmit="event.preventDefault(); const b=this.querySelector('.about-form-submit'); b.textContent='Sent, with thanks ✦'; b.disabled=true;">
+      <div class="about-form-row">
+        <div class="about-form-field">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Your name, as you'd like it read">
+        </div>
+        <div class="about-form-field">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required placeholder="Where we may reply">
+        </div>
+      </div>
+      <div class="about-form-field">
+        <label for="contact-subject">Subject</label>
+        <select id="contact-subject" name="subject">
+          <option value="order">An order enquiry</option>
+          <option value="product">A product question</option>
+          <option value="returns">Returns &amp; refunds</option>
+          <option value="other">Something else entirely</option>
+        </select>
+      </div>
+      <div class="about-form-field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required placeholder="How can we help?" rows="6"></textarea>
+      </div>
+      <button type="submit" class="about-form-submit">Send the letter&nbsp;&nbsp;→</button>
+    </form>
+  </div>
+</section>
+
+<section class="about-colophon" style="padding-bottom: 3rem;">
+  <div class="container">
+    <div class="about-colophon-grid">
+      <div class="about-colophon-item">
+        <span class="about-colophon-label">By Email</span>
+        <span class="about-colophon-value">support@shopcienty.co.uk</span>
+      </div>
+      <div class="about-colophon-item">
+        <span class="about-colophon-label">Office Hours</span>
+        <span class="about-colophon-value">Mon–Fri, 9:00–17:00&nbsp;GMT</span>
+      </div>
+      <div class="about-colophon-item">
+        <span class="about-colophon-label">Reply Within</span>
+        <span class="about-colophon-value">One working day</span>
+      </div>
+      <div class="about-colophon-item">
+        <span class="about-colophon-label">Seat</span>
+        <span class="about-colophon-value">London, United&nbsp;Kingdom</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-faq-section">
+  <div class="container">
+    <div class="about-section-head">
+      <span class="about-section-numeral">II.</span>
+      <h2 class="about-section-title">Frequently asked</h2>
+      <span class="about-section-rule" aria-hidden="true"></span>
+    </div>
+    <div class="about-faq-list">
+      <details class="about-faq">
+        <summary>How long does delivery take?</summary>
+        <p>Standard UK delivery takes three to five business days. Every order ships free, with no minimum spend.</p>
+      </details>
+      <details class="about-faq">
+        <summary>Can I return a product?</summary>
+        <p>Yes. Thirty days, no script, no reasoning required. Write to us and we'll send a prepaid Royal Mail return label within the working day.</p>
+      </details>
+      <details class="about-faq">
+        <summary>Do you ship outside the United Kingdom?</summary>
+        <p>Not yet. The register travels only within the Isles at present, though we hope to widen the routes in due course.</p>
+      </details>
+      <details class="about-faq">
+        <summary>How do I track my order?</summary>
+        <p>A tracking number is emailed the moment your parcel leaves our office, so you can follow its journey at your leisure.</p>
+      </details>
+      <details class="about-faq">
+        <summary>What payment methods do you accept?</summary>
+        <p>All major debit and credit cards, Apple Pay, and Google Pay. Every transaction is encrypted end-to-end.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container footer-links">
+    <div class="foot-link-col">
+      <div class="foot-rule">Shop</div>
+      <a href="./">The&nbsp;Register</a>
+      <a href="./cart.html">Basket</a>
+    </div>
+    <div class="foot-link-col">
+      <div class="foot-rule">Help</div>
+      <a href="./about.html">About</a>
+      <a href="./delivery.html">Delivery</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+    <div class="foot-link-col">
+      <div class="foot-rule">Legal</div>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <div class="foot-crest">
+      <img src="./assets/logo.jpg" alt="Shopcienty" class="foot-logo">
+    </div>
+    <div class="foot-legal">
+      <div>&copy; 2026 SHOPCIENTY LIMITED &middot; Registered in England &amp; Wales</div>
+      <div>Free UK delivery on all orders &middot; 30-day hassle-free returns</div>
+    </div>
+  </div>
+</footer>
+<script src="./assets/cart.js"></script>
+<script>
+  document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+    document.getElementById('main-nav')?.classList.toggle('open');
+    this.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
