@@ -354,6 +354,21 @@ header {
   aspect-ratio: 1;
   background: var(--line-dim);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #6b6b6b);
+}
+.about-row-image .cat-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 .cat-notch {
@@ -648,6 +663,78 @@ header {
   line-height: 1.2;
 }
 
+/* ─── Gift sets ──────────────────────────────────────────── */
+
+.giftset-ribbon {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 2;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-hi);
+  background: var(--orange-deep);
+  padding: 0.28rem 0.55rem;
+  border-radius: 2px;
+}
+.giftset-card .card-image { background: var(--bg-hi); }
+.giftset-rrp { text-decoration: line-through; color: var(--ink-fade); margin-left: 0.4rem; }
+.giftset-save { color: var(--orange-deep); font-weight: 600; margin-left: 0.4rem; }
+
+.section-giftsets {
+  background: var(--bg-hi);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.giftset-tag {
+  color: var(--orange-deep);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+}
+.giftset-saving-row { margin: 0.25rem 0 1.1rem; font-family: var(--sans); font-size: 0.9rem; }
+.pdp-rrp { text-decoration: line-through; color: var(--ink-fade); margin-right: 0.6rem; }
+.pdp-save { color: var(--orange-deep); font-weight: 600; }
+.giftset-buy { text-decoration: none; display: inline-block; text-align: center; }
+.giftset-ship-note {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 0.9rem 0 0;
+}
+
+.giftset-components {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
+}
+.giftset-component {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: opacity 0.3s ease;
+}
+.giftset-component:hover { opacity: 0.7; }
+.giftset-comp-img {
+  aspect-ratio: 1 / 1;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.giftset-comp-img img { max-width: 74%; max-height: 74%; object-fit: contain; mix-blend-mode: multiply; }
+.giftset-comp-title { font-family: var(--serif); font-size: 0.9rem; line-height: 1.3; color: var(--ink-soft); }
+@media (max-width: 900px) { .giftset-components { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .giftset-components { grid-template-columns: repeat(2, 1fr); } }
+
 /* ─── Breadcrumbs ────────────────────────────────────────── */
 
 .breadcrumbs {
@@ -833,6 +920,9 @@ header {
   border-bottom: 1px solid var(--line);
   color: var(--ink);
 }
+/* атрибут hidden должен побеждать display из класса (иначе empty-state + items видны вместе) */
+[hidden] { display: none !important; }
+
 .empty-state {
   border: 1px solid var(--line);
   padding: 5rem 2rem;
@@ -1328,6 +1418,7 @@ footer {
   margin-top: 0.25rem;
 }
 
+/* Lead with drop cap */
 .about-lead { padding: 4.5rem 0 1.5rem; }
 .about-prose {
   max-width: 64ch;
@@ -1350,13 +1441,16 @@ footer {
   letter-spacing: -0.02em;
 }
 
+/* Section heads with roman numeral + hairline */
 .about-section-head {
   display: grid;
   grid-template-columns: auto auto 1fr;
   gap: 1.5rem;
   align-items: baseline;
-  margin: 0 auto 2.5rem;
+  margin: 0 0 2.5rem;
   max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-section-numeral {
   font-family: var(--serif);
@@ -1383,6 +1477,7 @@ footer {
   margin-bottom: 0.4rem;
 }
 
+/* Principles grid */
 .about-principles { padding: 5.5rem 0 2.5rem; }
 .about-principles-grid {
   display: grid;
@@ -1424,6 +1519,7 @@ footer {
   margin: 0;
 }
 
+/* Pull quote */
 .about-quote-section { padding: 6rem 0 5rem; }
 .about-quote {
   text-align: center;
@@ -1457,8 +1553,10 @@ footer {
   padding: 0 0.1em;
 }
 
+/* Promise section */
 .about-promise { padding: 2.5rem 0 5rem; }
 
+/* Colophon */
 .about-colophon { padding: 2rem 0 6rem; }
 .about-colophon-ornament {
   text-align: center;

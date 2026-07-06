@@ -67,19 +67,23 @@ async function renderCartPage() {
     totalQty += qty;
     totalPrice += qty * p.price;
     const img = p.image_url
-      ? '<img src="' + p.image_url + '" alt="">'
+      ? '<img src="' + escapeHtml(p.image_url) + '" alt="">'
       : '<div class="placeholder">No image</div>';
     return `
       <div class="cart-item">
         ${img}
         <div class="item-title">${escapeHtml(p.title.slice(0, 90))}</div>
         <div class="item-price">£${(p.price * qty).toFixed(2)} <small>×${qty}</small></div>
-        <button class="item-remove" data-sku="${sku}" aria-label="Remove">×</button>
+        <button class="item-remove" data-sku="${escapeHtml(sku)}" aria-label="Remove">×</button>
       </div>`;
   }).join('');
 
+  const DELIVERY = 3.49;
+  const grand = totalPrice > 0 ? totalPrice + DELIVERY : 0;
   document.getElementById('cart-total-qty').textContent = totalQty;
-  document.getElementById('cart-total-price').textContent = '£' + totalPrice.toFixed(2);
+  const sub = document.getElementById('cart-subtotal');
+  if (sub) sub.textContent = '£' + totalPrice.toFixed(2);
+  document.getElementById('cart-total-price').textContent = '£' + grand.toFixed(2);
 }
 
 document.addEventListener('click', e => {
