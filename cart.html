@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Checkout | SHOPCIENTY</title>
+<title>Your basket | SHOPCIENTY</title>
 <meta name="description" content="SHOPCIENTY — Beauty &amp; household essentials delivered across the UK. Trusted brands, £3.49 flat-rate delivery, 30-day returns.">
 <link rel="canonical" href="https://www.shopcienty.com/cart.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SHOPCIENTY">
-<meta property="og:title" content="Checkout | SHOPCIENTY">
+<meta property="og:title" content="Your basket | SHOPCIENTY">
 <meta property="og:description" content="SHOPCIENTY — Beauty &amp; household essentials delivered across the UK. Trusted brands, £3.49 flat-rate delivery, 30-day returns.">
 <meta property="og:url" content="https://www.shopcienty.com/cart.html">
 <meta name="twitter:card" content="summary">
@@ -24,25 +24,42 @@
     <a href="./" class="logo" aria-label="Shopcienty home">
       <img src="./assets/logo-icon.jpg" alt="Shopcienty">
     </a>
+    <a href="./cart.html" class="cart-link mobile-cart" aria-label="Basket"><svg class="cart-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h3l2.4 11.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.5L22 7H6"/></svg><span class="cart-badge">0</span></a>
     <button class="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
     <nav class="nav" id="main-nav">
       <a href="./">The&nbsp;Register</a>
       <a href="./about.html">About</a>
       <a href="./delivery.html">Delivery</a>
       <a href="./contact.html">Contact</a>
+      <a href="./cart.html" class="cart-link nav-cart" aria-label="Basket"><svg class="cart-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h3l2.4 11.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.5L22 7H6"/></svg><span class="cart-word">Basket</span><span class="cart-badge">0</span></a>
     </nav>
   </div>
 </header>
 <main>
 
-<div class="container cart-page">
-  <div class="cart-kicker">Checkout</div>
-  <h1 class="page-title">Buy&nbsp;in&nbsp;one&nbsp;step.</h1>
-  <div class="empty-state">
+<div class="container cart-page" id="basket" data-endpoint="https://shopcienty-basket.shopcienty-uk.workers.dev/api/checkout">
+  <div class="cart-kicker">Your selection</div>
+  <h1 class="page-title">Your&nbsp;basket.</h1>
+
+  <div id="cart-empty" class="empty-state">
     <div class="empty-mark">✧</div>
-    <p>Choose an item in the Register and press <strong>Buy now</strong>. You can set the quantity on the
-    secure Stripe checkout page. Delivery is a flat &pound;3.49 to any UK address, with 30-day returns.</p>
-    <a href="./" class="btn">Go&nbsp;to&nbsp;the&nbsp;Register &nbsp;→</a>
+    <p>Your basket is empty.</p>
+    <a href="./" class="btn">Browse&nbsp;the&nbsp;Register &nbsp;→</a>
+  </div>
+
+  <div id="cart-notice" class="cart-notice" role="status" hidden></div>
+  <div id="cart-items" class="cart-items" hidden></div>
+
+  <div id="cart-summary" class="cart-summary" hidden>
+    <div class="summary-row"><span>Items</span><span id="cart-total-qty">0</span></div>
+    <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">£0.00</span></div>
+    <div class="summary-row"><span>UK delivery</span><span>£3.49</span></div>
+    <div class="summary-row total"><span>Total</span><span id="cart-total-price">£0.00</span></div>
+    <button type="button" class="btn checkout-btn" id="checkout-btn">Checkout&nbsp;securely &nbsp;→</button>
+    <p class="cart-error" id="cart-error" role="alert" hidden></p>
+    <p class="cart-ship-note">You enter your address and pay on Stripe's secure page: cards, Apple&nbsp;Pay,
+      Google&nbsp;Pay. Prices include VAT. Flat &pound;3.49 delivery to any UK address,
+      usually 2–5 working days &middot; 30-day returns.</p>
   </div>
 </div>
 </main>
