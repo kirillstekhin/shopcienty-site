@@ -2040,3 +2040,75 @@ footer {
   .trust-icon svg { width: 18px; height: 18px; }
   .trust-label { font-size: 0.7rem; }
 }
+
+/* ─── Корзина, кнопки покупки, контакты (23.10.2026) ─────── */
+.nav a.cart-link .cart-word { font-size: inherit; }
+a.mobile-cart { display: none; }
+@media (max-width: 900px) {
+  a.mobile-cart {
+    display: inline-flex; align-items: center; gap: 0.3rem; margin-left: auto;
+    color: var(--orange); text-decoration: none; padding: 0.35rem 0.4rem;
+  }
+  a.mobile-cart .cart-badge { font-size: 0.8rem; }
+  .nav a.nav-cart { display: none; }
+}
+.buy-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.4rem; margin-top: 0.25rem; }
+.buy-quick {
+  font-family: var(--sans); font-size: 0.8rem; color: var(--ink-soft);
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.buy-quick:hover { color: var(--ink); }
+.buy-note { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-fade); margin-top: 0.85rem; }
+.pdp-stock.sold-out { color: var(--ink-fade); }
+
+.basket-toast {
+  position: fixed; left: 50%; bottom: 1.5rem; transform: translate(-50%, 140%);
+  background: var(--ink); color: var(--bg); font-family: var(--sans); font-size: 0.85rem;
+  padding: 0.9rem 1.25rem; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  transition: transform .3s ease; z-index: 50; max-width: calc(100vw - 2rem); text-align: center;
+}
+.basket-toast.show { transform: translate(-50%, 0); }
+.basket-toast a { color: var(--bg); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+#basket .cart-item { grid-template-columns: 84px 1fr auto auto; }
+.cart-item .item-thumb { display: block; }
+.cart-item .item-main { display: grid; gap: 0.35rem; }
+.cart-item a.item-title { color: var(--ink); text-decoration: none; }
+.cart-item a.item-title:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cart-item .item-unit { font-family: var(--sans); font-size: 0.75rem; color: var(--ink-fade); }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--line); width: max-content; margin-top: 0.25rem; }
+.qty-btn {
+  width: 2rem; height: 2rem; background: transparent; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 1rem; color: var(--ink);
+}
+.qty-btn:hover:not(:disabled) { background: var(--bg-alt); }
+.qty-btn:disabled { color: var(--line); cursor: default; }
+.qty-n { min-width: 2rem; text-align: center; font-family: var(--sans); font-size: 0.85rem; }
+.cart-notice {
+  font-family: var(--sans); font-size: 0.85rem; color: var(--ink-soft);
+  background: var(--bg-alt); padding: 0.85rem 1rem; margin-bottom: 1.5rem;
+}
+.cart-error { font-family: var(--sans); font-size: 0.85rem; color: var(--orange-deep); margin-top: 1rem; }
+.cart-error a { color: inherit; }
+.checkout-btn { width: 100%; justify-content: center; }
+.cart-ship-note { font-family: var(--sans); font-size: 0.75rem; line-height: 1.55; color: var(--ink-fade); margin-top: 1rem; }
+.thanks-small { font-style: normal !important; font-family: var(--sans) !important; font-size: 0.9rem !important; }
+
+.contact-card { border: 1px solid var(--line); padding: 2rem; display: grid; gap: 1rem; max-width: 640px; }
+.contact-address { font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 2rem); }
+.contact-address a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.contact-hint { font-family: var(--sans); font-size: 0.85rem; color: var(--ink-soft); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; }
+.contact-copy {
+  background: transparent; border: 1px solid var(--line); padding: 0.85rem 1.25rem; cursor: pointer;
+  font-family: var(--sans); font-size: 0.78rem; color: var(--ink-soft);
+}
+.contact-copy:hover { border-color: var(--ink); color: var(--ink); }
+
+@media (max-width: 560px) {
+  #basket .cart-item { grid-template-columns: 64px 1fr auto; gap: 0.9rem; align-items: start; }
+  #basket .cart-item .item-price { grid-column: 3; grid-row: 1; justify-self: end; }
+  #basket .cart-item .item-remove { grid-column: 3; grid-row: 1; align-self: end; justify-self: end; margin-top: 2.2rem; }
+  .cart-item img { max-width: 56px; max-height: 56px; }
+  .contact-card { padding: 1.25rem; }
+}

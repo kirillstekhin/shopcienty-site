@@ -54,7 +54,7 @@
 <section class="about-lead">
   <div class="container">
     <div class="about-prose">
-      <p class="about-lead-para"><span class="about-dropcap">A</span> question about an order, a product enquiry, a suggestion for the register — or simply a note to say hello. Fill in the form below, or write to us directly at <strong>admin@shopcienty.com</strong>.</p>
+      <p class="about-lead-para"><span class="about-dropcap">A</span> question about an order, a product enquiry, a trade or wholesale matter — or simply a note to say hello. Write to us at <strong>admin@shopcienty.com</strong>.</p>
     </div>
   </div>
 </section>
@@ -63,37 +63,19 @@
   <div class="container">
     <div class="about-section-head">
       <span class="about-section-numeral">I.</span>
-      <h2 class="about-section-title">A letter</h2>
+      <h2 class="about-section-title">By email</h2>
       <span class="about-section-rule" aria-hidden="true"></span>
     </div>
-    <form class="about-form" onsubmit="event.preventDefault(); const f=this; const subj=encodeURIComponent('Shopcienty enquiry: '+f.subject.value); const body=encodeURIComponent('From: '+f.name.value+' <'+f.email.value+'>
-
-'+f.message.value); window.location.href='mailto:admin@shopcienty.com?subject='+subj+'&body='+body; const b=f.querySelector('.about-form-submit'); b.textContent='Opening your email…';">
-      <div class="about-form-row">
-        <div class="about-form-field">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" name="name" required placeholder="Your name, as you'd like it read">
-        </div>
-        <div class="about-form-field">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" required placeholder="Where we may reply">
-        </div>
+    <!-- 23.10.2026: была форма, которая открывала почтовую программу (mailto). Где программы нет, «Send» ничего
+         не делал — выглядело как неработающий сайт. Теперь честно: адрес + кнопка письма + копирование. -->
+    <div class="contact-card">
+      <p class="contact-address"><a href="mailto:admin@shopcienty.com">admin@shopcienty.com</a></p>
+      <p class="contact-hint">About an order? Include the email address you paid with, so we can find it straight away.</p>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:admin@shopcienty.com?subject=Shopcienty%20enquiry">Write&nbsp;an&nbsp;email &nbsp;→</a>
+        <button type="button" class="contact-copy" data-copy="admin@shopcienty.com">Copy address</button>
       </div>
-      <div class="about-form-field">
-        <label for="contact-subject">Subject</label>
-        <select id="contact-subject" name="subject">
-          <option value="order">An order enquiry</option>
-          <option value="product">A product question</option>
-          <option value="returns">Returns &amp; refunds</option>
-          <option value="other">Something else entirely</option>
-        </select>
-      </div>
-      <div class="about-form-field">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" required placeholder="How can we help?" rows="6"></textarea>
-      </div>
-      <button type="submit" class="about-form-submit">Send the letter&nbsp;&nbsp;→</button>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -117,8 +99,8 @@
         <span class="about-colophon-value">7 Bell Yard, London WC2A&nbsp;2JR</span>
       </div>
       <div class="about-colophon-item">
-        <span class="about-colophon-label">Dispatch</span>
-        <span class="about-colophon-value">United&nbsp;Kingdom</span>
+        <span class="about-colophon-label">Trading&nbsp;address</span>
+        <span class="about-colophon-value">Unit 4, Salters Boatyard, Meadow Lane, Oxford OX4&nbsp;4BL</span>
       </div>
     </div>
   </div>
@@ -134,11 +116,11 @@
     <div class="about-faq-list">
       <details class="about-faq">
         <summary>How long does delivery take?</summary>
-        <p>Standard UK delivery takes three to five business days, at a flat £3.49 to any UK address.</p>
+        <p>Standard UK delivery usually takes two to five working days, at a flat £3.49 to any UK address.</p>
       </details>
       <details class="about-faq">
         <summary>Can I return a product?</summary>
-        <p>Yes. Thirty days, no script, no reasoning required. Write to us and we'll send a prepaid Royal Mail return label within the working day.</p>
+        <p>Yes, within thirty days, no reason needed. Write to us with your order details and we'll reply with the return address within one working day. Return postage for a change of mind is at your cost; if an item is faulty, we send a prepaid label.</p>
       </details>
       <details class="about-faq">
         <summary>Do you ship outside the United Kingdom?</summary>
@@ -150,7 +132,7 @@
       </details>
       <details class="about-faq">
         <summary>What payment methods do you accept?</summary>
-        <p>All major debit and credit cards, Apple Pay, and Google Pay. Every transaction is encrypted end-to-end.</p>
+        <p>Debit and credit cards (Visa, Mastercard, American Express), Apple Pay and Google Pay, on Stripe's secure checkout page. We never see or store your card details.</p>
       </details>
     </div>
   </div>
@@ -181,6 +163,7 @@
     <div class="foot-legal">
       <div>&copy; 2026 SHOPCIENTY LIMITED &middot; Registered in England &amp; Wales &middot; Company No. 14960765</div>
       <div>Registered office: 7 Bell Yard, London WC2A 2JR &middot; VAT No. GB483349856</div>
+      <div>Trading address &amp; returns: Unit 4, Salters Boatyard, Meadow Lane, Oxford OX4&nbsp;4BL</div>
       <div>&pound;3.49 flat-rate UK delivery &middot; 30-day hassle-free returns</div>
     </div>
   </div>
